@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Post from "../Post/Post";
+import "./Main.css";
 
 class Main extends React.Component {
     state = {
@@ -19,13 +20,15 @@ class Main extends React.Component {
         // console.log(this.state.post)
         return (
             <Fragment>
-                <p className="title">Ensiklopedia</p>
+                <p className="section-title"><span>Ensiklo</span>pedia</p>
+                <div className="main">
                 {
                     this.state.post.map(post => {
-                        return <Post img={post.image} nama={post.name} />;
+                        return <Post key = {post.id} img={post.image} nama={post.name} />;
                     }
                     )
                 }
+                </div>
             </Fragment>
         );
     }

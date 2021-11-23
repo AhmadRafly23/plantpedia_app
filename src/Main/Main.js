@@ -6,15 +6,17 @@ class Main extends React.Component {
         post: []
     }
     componentDidMount() {
-        fetch('http://localhost:3000/plant')
+        fetch('https://my-json-server.typicode.com/AhmadRafly23/AhmadRafly23/db')
         .then((response) => response.json())
         .then(json => {
             this.setState({
-                post: json
+                post: json.plant
             })
         });
     }
+    
     render() {
+        // console.log(this.state.post)
         return (
             <Fragment>
                 <p className="title">Ensiklopedia</p>

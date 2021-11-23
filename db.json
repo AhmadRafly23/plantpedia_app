@@ -1,0 +1,29 @@
+{
+    "plant": [
+      {
+        "id": 1,
+        "image": "https://i.ibb.co/5G4cmd7/aloevera.jpg",
+        "name": "Aloe Vera"
+      },
+      {
+        "id": 2,
+        "image": "https://i.ibb.co/MMG2WHZ/kaktus.jpg",
+        "name": "Kaktus"
+      },
+      {
+        "id": 3,
+        "image": "https://i.ibb.co/t2h8TFZ/lily.jpg",
+        "name": "Lily"
+      },
+      {
+        "id": 4,
+        "image": "https://i.ibb.co/r6xCYgV/lotus.jpg",
+        "name": "Lotus"
+      },
+      {
+        "id": 5,
+        "image": "https://i.ibb.co/Q9S6c4D/monstera.jpg",
+        "name": "Monstera"
+      }
+    ]
+  }

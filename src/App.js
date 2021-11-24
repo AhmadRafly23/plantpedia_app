@@ -1,4 +1,4 @@
-import { BrowserRouter,Route, Routes, NavLink, Navigate } from "react-router-dom";
+import { Route, Routes, NavLink, Navigate } from "react-router-dom";
 import React from 'react';
 import './App.css';
 import './About/About';
@@ -10,13 +10,14 @@ import { BsSearch } from "react-icons/bs";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Main from "./Main/Main";
-
-
+import Details from "./Details/Details";
+import Search from "./Search/Search";
+import DetailSearch from "./DetailSearch/DetailSearch";
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <header>
-        <img src="/logo.png" />
+        <img src="/logo.png" alt="logo"/>
         <p id="titleGroup">PlantPedia</p>
       </header>
       <div className="content">
@@ -25,6 +26,9 @@ function App() {
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Main" element={<Main />}></Route>
+          <Route path="/Search" element={<Search />}></Route>
+          <Route path="/Cardsdetails/:id" element={<Details/>}></Route>
+          <Route path="/DetailSearch/:name" element={<DetailSearch/>}></Route>
         </Routes>
       </div>
       <footer>
@@ -36,7 +40,7 @@ function App() {
           <AiOutlineBook className="icon" />
           Plant Information
         </NavLink>
-        <NavLink to="/" className="iconWrapper">
+        <NavLink to="/Search" className="iconWrapper">
           <BsSearch className="icon" />
           Search
         </NavLink>
@@ -45,7 +49,7 @@ function App() {
           About
         </NavLink>
       </footer>
-    </BrowserRouter>
+  </>
   );
 }
 

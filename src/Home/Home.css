@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 .container{
     display: flex;
@@ -56,6 +57,7 @@
     color: #F8F9F3;
     font-family: 'Roboto', sans-serif;
 }
+
 .plant{
     color: #689C40;
     margin-right: 15px;
@@ -64,4 +66,32 @@
 .btn:hover{
     color: #F8F9F3;
     background-color: #f0a748;
+}
+
+@media screen and (max-width: 620px) {
+  .container{
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0;
+  }  
+  .container-right img{
+    width: 270px;
+    height: 290px;
+    border-radius: 50%;
+}
+.container-right{
+    width: 100%;
+}
+.container-left{
+    width: 100%;
+    padding: 0 30px;
+    margin:0 5px;
+}
+.container-left h1{
+    font-size: 30px;
+}
+.btn3{
+    display: flex;
+    justify-content: center;
+}
 }

@@ -9,7 +9,7 @@ class About extends React.Component{
         return(
             <div className="container">
                 <div className="about">
-                    <img src="/foto.jpg" />
+                    <img src="/foto.jpg" alt="profile"/>
                     <p>Ahmad Rafly Pradana</p>
                     <div className="student">Student</div>
                     <div className="line"></div>

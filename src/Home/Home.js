@@ -1,7 +1,11 @@
 import './Home.css';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Home extends React.Component {
+    handleClick = () =>{
+      
+    }
     render() {
         return (
             <div className="container">
@@ -11,10 +15,12 @@ class Home extends React.Component {
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in.</p>
-                    <button className="btn">Explore</button>
+                    <div className="btn3">
+                    <NavLink to="/Main"><button className="btn">Explore</button></NavLink>
+                    </div>
                 </div>
                 <div className="container-right">
-                    <img src="/plant.jpg" />
+                    <img src="/plant.jpg" alt="plant"/>
                 </div>
             </div>
         );

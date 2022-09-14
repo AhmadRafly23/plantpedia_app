@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./Search.css"
+import "./Search.css";
 import { NavLink } from "react-router-dom";
 
 const Search = () => {
@@ -12,7 +12,10 @@ const Search = () => {
   useEffect(() => {
     const doSearch = (e) => {
       axios
-        .get("https://my-json-server.typicode.com/AhmadRafly23/AhmadRafly23/plant?name=" + name)
+        .get(
+          "https://my-json-server.typicode.com/AhmadRafly23/AhmadRafly23/plant?name=" +
+            name
+        )
         .then((results) => {
           setData(results.data);
         });
@@ -30,19 +33,19 @@ const Search = () => {
           placeholder="Search Plant by name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-            />
-            <div className="item-container1">
-                {data.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <NavLink to={`/DetailSearch/${item.name}`}>
-                                <img className="imgsearch" src={item.image} alt="" />
-                                <div className="search-name">
-                                <p>{item.name}</p>
-                                </div>
-                            </NavLink>
-                        </div>
-                    );
+        />
+        <div className="item-container1">
+          {data.map((item, index) => {
+            return (
+              <div key={index}>
+                <NavLink to={`/DetailSearch/${item.name}`}>
+                  <img className="imgsearch" src={item.image} alt="" />
+                  <div className="search-name">
+                    <p>{item.name}</p>
+                  </div>
+                </NavLink>
+              </div>
+            );
           })}
         </div>
       </main>
@@ -65,7 +68,9 @@ const Search = () => {
   return (
     <div className="search-container">
       {renderError()}
-      <h1 className="txt">Search <span className="span-search">Plant</span></h1>
+      <h1 className="txt">
+        Search <span className="span-search">Plant</span>
+      </h1>
       {isLoading ? (
         <div className="search-loading">Loading...</div>
       ) : (
